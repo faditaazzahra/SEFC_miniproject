@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>WELCOME TO KATIK</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<style type="text/css">
+		@import url(index.css);
+	</style>
+</head>
+
+<header>
+	<center>
+		<h1>Welcome To Katik</h1>
+		<p>Hai, sobat! Selamat datang di Katik <br>
+		Sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar</p>
+	</center>
+</header>
+
+<body>
+	<div id="menu">
+		<div id="topmenu">
+			<ul>
+				<li><a href="#triangle" class="aktif">Segitiga</a></li>
+			</ul>
+
+			<br>
+
+			<ul>
+				<li><a href="#parallelogram" class="aktif">Jajar Genjang</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="inikonten">
+		<div id="kontenkonten">
+			<div class="isi__0" id="triangle">
+				<h4 class="judul">Luas Segitiga</h4><br>
+				<center><img src="segitiga2.png" class="gambar"></center>
+				<p>Rumus luas segitiga yaitu:
+				<br><center>L = 1/2 x a x t</center><br>
+					Catatan:<br>
+					L = Luas<br>
+					a = Panjang alas<br>
+					t = Tinggi
+				</p><hr>
+
+				<center><h2><b>Hitung Luas Segitiga</b></h2>
+					<input type="number" placeholder="Masukkan Nilai Alas Segitiga (cm)" id="alas" class="isian"><br><br>
+					<input type="number" placeholder="Masukkan Nilai Tinggi Segitiga (cm)" id="tinggi" class="isian"><br><br>
+					<button onclick="luassegi()">Hitung Luas Segitiga</button>
+					<input type="button" value="reset" onclick="clear1()" class="btn-reset">
+					<br><br>
+				<span id="hasil"></span></center>
+
+				<br><br><br>
+
+				<h4 class="judul">Keliling Segitiga</h4><br>
+				<center><img src="segitiga.png" class="gambar"></center>
+				<p>Rumus keliling segitiga yaitu:
+					<br><center>K = S1 + S2 + S3</center><br>
+					Catatan:<br>
+					K = Keliling<br>
+					S1 = Sisi 1<br>
+					S2 = Sisi 2 <br>
+					S3 = Sisi 3 <br>
+				</p><hr>
+		
+				<center><h2><b>Hitung Keliling Segitiga</b></h2>
+					<input type="number" placeholder="Masukkan Nilai Sisi Pertama Segitiga (cm)" id="sisi1" class="isian"><br><br>
+					<input type="number" placeholder="Masukkan Nilai Sisi Kedua Segitiga (cm)" id="sisi2" class="isian"><br><br>
+					<input type="number" placeholder="Masukkan Nilai Sisi Ketiga Segitiga (cm)" id="sisi3" class="isian"><br><br>
+					<button onclick="kelsegi()">Hitung Keliling Segitiga</button>
+					<input type="button" value="reset" onclick="clearkel()" class="btn-reset">
+					<br><br>
+					<span id="hasilkel"></span></center>
+			</div>
+
+		<div class="isi__1" id="parallelogram">
+			<h4 class="judul">Luas Jajar Genjang</h4><br>
+			<center><img src="jajargenjang.png" class="gambar"></center>
+			<p>Rumus luas jajar genjang yaitu:<br>
+					<center>L = a x t</center><br>
+					Catatan:<br>
+					L = Luas <br>
+					a = Alas <br>
+					t = Tinggi <br>
+				</p>
+				<hr>
+
+			<center>
+				<h2><b>Hitung Luas Jajar Genjang</b></h2>
+				<input type="number" placeholder="Masukkan Nilai Alas Jajar Genjang (cm)" id="jajar" class="isian"><br><br>
+				<input type="number" placeholder="Masukkan Nilai Tinggi Jajar Genjang (cm)" id="genjang"class="isian"><br><br>
+				<button onclick="luas()">Hitung Luas Jajar Genjang</button>
+				<input type="button" value="reset" onclick="hapus1()" class="btn-reset">
+				<br><br>
+				<span id="outputluas"></span>
+			</center>
+
+			<br><br><br>
+
+			<h4 class="judul">Keliling Jajar Genjang</h4><br>
+			<center><img src="jajargenjang.png" class="gambar"></center>
+			<p>Rumus keliling jajar genjang yaitu:<br>
+				<center>K = 2 x ( a + b )</center><br>
+				Catatan:<br>
+				K = Keliling <br>
+				a = Alas <br>
+				b = Sisi Miring <br>
+			</p>
+			<hr>
+	
+			<center>
+				<h2><b>Hitung Keliling Jajar Genjang</b></h2>
+				<input type="number" placeholder="Masukkan Nilai Alas Jajar Genjang (cm)" id="alaskel" class="isian"><br><br>
+				<input type="number" placeholder="Masukkan Nilai Sisi Miring Jajar Genjang (cm)" id="miring" class="isian"><br><br>
+				<button onclick="kel()">Hitung Keliling Jajar Genjang</button>
+				<input type="button" value="reset" onclick="hapuskel()" class="btn-reset">
+				<br><br>
+				<span id="outputkel"></span>
+			</center>
+		</div>
+	</div>
+</div>
+
+<script src="index.js"></script>
+
+</body>
+</html>
